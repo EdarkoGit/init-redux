@@ -1,13 +1,16 @@
+import { SET_NAME } from "./const";
+
 const initialState = {
-  edarcode: "",
+  name: "",
 };
 
 export const reducerOne = (state = initialState, { type, payload }) => {
   switch (type) {
-    /*     case value:
-      
-      return;
-   */
+    case SET_NAME:
+      return {
+        ...state,
+        name: payload,
+      };
     default:
       return state;
   }
